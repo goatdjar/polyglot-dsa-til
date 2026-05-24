@@ -1,0 +1,13 @@
+{
+  "executionEnvironments": [
+    {
+      "root": "python",
+      "extraPaths": [
+        "python",
+        "python/dsa_utils"
+      ]
+    }
+  ],
+  "venvPath": "python",
+  "venv": ".venv"
+}

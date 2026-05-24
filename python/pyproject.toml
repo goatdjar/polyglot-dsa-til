@@ -1,0 +1,24 @@
+[project]
+name = "dsa-utils"
+version = "0.1.0"
+description = "A minimalist Python DSA library package"
+readme = "README.md"
+authors = [
+    { name = "goatdjar", email = "119997863+goatdjar@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+# [build-system]
+# requires = ["uv_build>=0.9.30,<0.10.0"]
+# build-backend = "uv_build"
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# This tells the builder exactly where your renamed module lives
+[tool.hatch.build.targets.wheel]
+packages = ["dsa_utils"]
+
+# [tool.uv]
+# workspace = { members = ["python"] }
