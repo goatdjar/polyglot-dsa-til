@@ -1,0 +1,25 @@
+# === Nix / direnv ===
+.direnv/
+.envrc
+result
+result-*
+
+# === Python (uv & standard) ===
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# === Rust ===
+/target/
+**/*.rs.bk
+cargo-lock.json
+
+# === IDEs and OS ===
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
