@@ -7,38 +7,48 @@ A minimalist, multi-language data structures and algorithms workspace. Powered b
 ```text
 dsa/
 ├── flake.nix             # Nix development environment (Rust + uv)
-├── python/               # Python DSA library package
-│   ├── dsa_utils/        # Library source code
-│   └── pyproject.toml    # Python project configuration
-├── rust/                 # Rust Cargo workspace
+├── pyrightconfig.json    # Pyright LSP configuration for editor integration
+├── python/               # 🐍 Python Workspace
+│   ├── dsa_utils/        # Clean library source code (importable modules)
+│   ├── examples/         # Scratchpad run scripts and execution sandboxes
+│   └── pyproject.toml    # Python project package metadata (Hatchling/uv)
+├── rust/                 # 🦀 Rust Cargo Workspace
 │   ├── Cargo.toml        # Workspace root manifest
-│   └── dsa-core/         # Rust library crate
-├── examples/             # Language-agnostic scratchpad run scripts
-└── til/                  # Today I Learned markdown files
+│   └── dsa-core/         # Core Rust library crate
+└── til/                  # 📝 Today I Learned markdown files
+
 ```
 
 ## 🚀 Quick Start
 
 ### 1. Enter the Environment
-Run this in the project root to load all required system tools automatically:
+Run this command in the project root to load all required system tools, runtimes, and paths automatically via Nix:
+
+``` bash
+direnv allow
+```
+
+Or
+
 ```bash
 nix develop
 ```
 
 ### 2. Python Workspace (uv)
-Execute example scripts instantly. The local `dsa_utils` library is linked automatically:
+Navigate to the python/ directory to manage dependencies and execute scratchpad scripts. The local dsa_utils library is linked dynamically by uv:
 ```bash
+cd python
 uv run examples/run_sorting.py
 ```
 
 ### 3. Rust Workspace (Cargo)
-Run the built-in module validation tests:
+Navigate to the rust/ directory to run the built-in module validation tests:
 ```bash
 cd rust
 cargo test
 ```
 
 ## 📝 Rules of the Repo
-* **No standalone execution scripts in the source:** All algorithms must be built as importable library functions inside `python/` or `rust/`.
-* **Scratchpad separation:** Keep all trial codes, benchmarks, and ad-hoc executions inside the `examples/` directory.
-* **Keep it atomic:** Use the `til/` folder to write brief, concept-specific notes on time and space complexities.
+* **No standalone execution scripts in the source:** All algorithms must be built as pure, importable library functions inside python/dsa_utils/ or rust/dsa-core/.
+* **Language-Specific Sandbox Isolation:** Keep all trial codes, benchmarks, and ad-hoc executions strictly inside the respective language's examples/ directory (e.g., python/examples/).
+* **Keep it atomic:** Use the til/ folder to write brief, concept-specific notes tracking structural observations, time complexity, and space complexity ($O$ notation).
