@@ -29,6 +29,7 @@
             # Python Toolchain
             uv
             python312
+            pyright
 
             # System libraries often needed by Python wheels (C extensions)
             stdenv.cc.cc.lib
@@ -37,7 +38,8 @@
 
           shellHook = ''
             # 1. Force uv to use the Nix-provided Python interpreter
-            export UV_PYTHON="${pkgs.python3}/bin/python"
+            # export UV_PYTHON="${pkgs.python3}/bin/python"
+            export PYTHONPATH="$PWD/python:$PYTHONPATH"
 
             # 2. Prevent uv from downloading its own unpatched Python binaries
             export UV_PYTHON_DOWNLOADS="never"
