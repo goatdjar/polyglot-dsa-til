@@ -1,6 +1,6 @@
 # === Nix / direnv ===
 .direnv/
-.envrc
+# .envrc
 result
 result-*
 
