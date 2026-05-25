@@ -44,9 +44,14 @@ uv run examples/run_sorting.py
 ```
 
 ### 3. Rust Workspace (Cargo)
-Navigate to the rust/ directory to run the built-in module validation tests:
+Navigate to the rust/ directory to build your crates, run tests, or execute standalone example scripts:
 ```bash
 cd rust
+
+# Run unit tests inside the library
+cargo test
+
+# Run a localized scratchpad example script
 # cargo run --example <filename_without_the_extension>
 cargo run --example run_sorting 
 
@@ -57,6 +62,6 @@ Sorted array: [5, 12, 23, 32, 74, 89]
 ```
 
 ## 📝 Rules of the Repo
-* **No standalone execution scripts in the source:** All algorithms must be built as pure, importable library functions inside python/dsa_utils/ or rust/dsa-core/.
-* **Language-Specific Sandbox Isolation:** Keep all trial codes, benchmarks, and ad-hoc executions strictly inside the respective language's examples/ directory (e.g., python/examples/).
+* **No standalone execution scripts in the source:** All algorithms must be built as pure, importable library functions inside python/dsa_utils/ or rust/dsa-core/src/.
+* **Language-Specific Sandbox Isolation:** Keep all trial codes, benchmarks, and ad-hoc executions strictly inside the respective language's localized examples/ directory.
 * **Keep it atomic:** Use the til/ folder to write brief, concept-specific notes tracking structural observations, time complexity, and space complexity ($O$ notation).
