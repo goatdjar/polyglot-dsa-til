@@ -5,6 +5,7 @@ result
 result-*
 
 # === Python (uv & standard) ===
+# --- Python Cache (uv/hatchling) ---
 .venv/
 __pycache__/
 *.py[cod]
@@ -12,8 +13,15 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 .mypy_cache/
+python/.venv/
+*.pyc
+.uv/
 
 # === Rust ===
+# --- Rust Cache ---
+target/
+rust/target/
+rust/dsa-core/target/
 /target/
 **/*.rs.bk
 cargo-lock.json
