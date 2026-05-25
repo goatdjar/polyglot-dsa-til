@@ -15,6 +15,8 @@ dsa/
 ├── rust/                 # 🦀 Rust Cargo Workspace
 │   ├── Cargo.toml        # Workspace root manifest
 │   └── dsa-core/         # Core Rust library crate
+│       ├── src/          # Pure library code (lib.rs)
+│       └── examples/     # Scratchpad execution scripts (run_sorting.rs)
 └── til/                  # 📝 Today I Learned markdown files
 
 ```
@@ -45,7 +47,13 @@ uv run examples/run_sorting.py
 Navigate to the rust/ directory to run the built-in module validation tests:
 ```bash
 cd rust
-cargo test
+# cargo run --example <filename_without_the_extension>
+cargo run --example run_sorting 
+
+# Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.01s
+# Running `target/debug/examples/run_sorting`
+Original array: [74, 23, 5, 89, 32, 12]
+Sorted array: [5, 12, 23, 32, 74, 89]
 ```
 
 ## 📝 Rules of the Repo
