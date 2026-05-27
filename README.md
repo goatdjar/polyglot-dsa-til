@@ -11,7 +11,8 @@ dsa/
 ├── python/               # 🐍 Python Workspace
 │   ├── dsa_utils/        # Clean library source code (importable modules)
 │   ├── examples/         # Scratchpad run scripts and execution sandboxes
-│   └── pyproject.toml    # Python project package metadata (Hatchling/uv)
+│   ├── pyproject.toml    # Python project package metadata (Hatchling/uv)
+│   └── tests/            # 🧪 NEW: Dedicated testing directory
 ├── rust/                 # 🦀 Rust Cargo Workspace
 │   ├── Cargo.toml        # Workspace root manifest
 │   └── dsa-core/         # Core Rust library crate
@@ -39,6 +40,9 @@ nix develop
 ### 2. Python Workspace (uv)
 Navigate to the python/ directory to manage dependencies and execute scratchpad scripts. The local dsa_utils library is linked dynamically by uv:
 ```bash
+# Run tests
+uv run python -m unittest discover -s tests -v
+
 cd python
 uv run examples/run_sorting.py
 ```
