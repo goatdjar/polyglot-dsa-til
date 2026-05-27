@@ -40,10 +40,12 @@ nix develop
 ### 2. Python Workspace (uv)
 Navigate to the python/ directory to manage dependencies and execute scratchpad scripts. The local dsa_utils library is linked dynamically by uv:
 ```bash
+cd python
+
 # Run tests
 uv run python -m unittest discover -s tests -v
 
-cd python
+# Run examples
 uv run examples/run_sorting.py
 ```
 
