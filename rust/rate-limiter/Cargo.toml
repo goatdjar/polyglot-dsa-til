@@ -1,0 +1,8 @@
+[package]
+name = "rate-limiter"
+version = "0.1.0"
+edition = "2024"
+description = "Trait-based rate limiting algorithms (Token Bucket, Leaky Bucket, Fixed Window Counter, Sliding Window Log, Sliding Window Counter)"
+license = "MIT"
+
+[dependencies]
