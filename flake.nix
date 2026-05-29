@@ -31,6 +31,9 @@
             python312
             pyright
 
+            # CLI tools for testing
+            jq
+
             # System libraries often needed by Python wheels (C extensions)
             stdenv.cc.cc.lib
             zlib
