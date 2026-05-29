@@ -6,3 +6,6 @@ description = "Trait-based rate limiting algorithms (Token Bucket, Leaky Bucket,
 license = "MIT"
 
 [dependencies]
+
+[features]
+test-utils = []

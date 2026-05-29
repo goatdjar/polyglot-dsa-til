@@ -70,7 +70,7 @@ impl TokenBucket {
 
     /// Inline test
     /// Handy shortcut for time-travelling inside unit tests.
-    #[cfg(test)]
+    #[cfg(any(test, feature = "test-utils"))]
     pub(crate) fn simulate_time_passing(&mut self, simulated_duration: Duration) {
         let future_time = self.last_checked + simulated_duration;
         self.top_up_tokens(future_time);
