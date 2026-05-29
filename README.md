@@ -15,15 +15,12 @@ dsa/
 │   └── tests/            # 🧪 Dedicated testing directory for Python
 ├── rust/                 # 🦀 Rust Cargo Workspace
 │   ├── Cargo.toml        # Workspace root manifest
-│   ├── dsa-core/         # Core Rust library crate
+│   ├── dsa-core/         # Core algorithmic data structures library crate
 │   │   ├── src/          # Pure library code (lib.rs)
 │   │   └── examples/     # Scratchpad execution scripts (run_sorting.rs)
-│   └── rate-limiter/ 
-│       ├── src/
-│       │   ├── lib.rs
-│       │   └── rate_limiter.rs
-│       └── tests/
-│           └── rate_limiter_tests.rs
+│   └── rate-limiter/     # 🛡️ High-performance systems utility crate
+│       ├── src/          # Token Bucket implementation details
+│       └── tests/        # Integration and clock-boundary test suites
 └── til/                  # 📝 Today I Learned markdown files
 
 ```
