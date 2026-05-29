@@ -68,6 +68,16 @@ cargo run --example run_sorting
 # Running `target/debug/examples/run_sorting`
 Original array: [74, 23, 5, 89, 32, 12]
 Sorted array: [5, 12, 23, 32, 74, 89]
+
+# Check if test-utils feature is declared
+cargo metadata --format-version 1 | jq '.packages[] | select(.name == "rate-limiter") | .features'
+# Should return:
+{
+  "test-utils": []
+}
+
+# Run unit tests (simulate_time_passing available via `test` cfg)
+cargo test -p rate-limiter --lib
 ```
 
 ## 📝 Rules of the Repo
