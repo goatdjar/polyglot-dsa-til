@@ -12,12 +12,18 @@ dsa/
 │   ├── dsa_utils/        # Clean library source code (importable modules)
 │   ├── examples/         # Scratchpad run scripts and execution sandboxes
 │   ├── pyproject.toml    # Python project package metadata (Hatchling/uv)
-│   └── tests/            # 🧪 NEW: Dedicated testing directory
+│   └── tests/            # 🧪 Dedicated testing directory for Python
 ├── rust/                 # 🦀 Rust Cargo Workspace
 │   ├── Cargo.toml        # Workspace root manifest
-│   └── dsa-core/         # Core Rust library crate
-│       ├── src/          # Pure library code (lib.rs)
-│       └── examples/     # Scratchpad execution scripts (run_sorting.rs)
+│   ├── dsa-core/         # Core Rust library crate
+│   │   ├── src/          # Pure library code (lib.rs)
+│   │   └── examples/     # Scratchpad execution scripts (run_sorting.rs)
+│   └── rate-limiter/ 
+│       ├── src/
+│       │   ├── lib.rs
+│       │   └── rate_limiter.rs
+│       └── tests/
+│           └── rate_limiter_tests.rs
 └── til/                  # 📝 Today I Learned markdown files
 
 ```
